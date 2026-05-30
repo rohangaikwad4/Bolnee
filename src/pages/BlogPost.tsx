@@ -15,7 +15,7 @@ export default function BlogPost() {
           <p className="text-gray-600 mb-8">The blog post you're looking for doesn't exist.</p>
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
+            className="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
@@ -27,23 +27,23 @@ export default function BlogPost() {
 
   return (
     <div>
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 py-24 lg:py-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-violet-700 via-brand-600 to-violet-800 py-24 lg:py-32">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-40" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 text-blue-200 hover:text-white mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-violet-200 hover:text-white mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
           </Link>
-          <span className="inline-block text-xs font-semibold text-blue-200 bg-white/20 px-3 py-1 rounded-full mb-4">
+          <span className="inline-block text-xs font-semibold text-violet-200 bg-white/20 px-3 py-1 rounded-full mb-4">
             {post.category}
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             {post.title}
           </h1>
-          <div className="flex flex-wrap items-center gap-6 text-blue-100">
+          <div className="flex flex-wrap items-center gap-6 text-violet-100">
             <div className="flex items-center gap-2 text-sm">
               <User className="w-4 h-4" />
               {post.author}
@@ -62,8 +62,8 @@ export default function BlogPost() {
 
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="h-64 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl flex items-center justify-center mb-12">
-            <span className="text-8xl font-bold text-blue-100">{post.category[0]}</span>
+          <div className="h-64 bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl flex items-center justify-center mb-12">
+            <span className="text-8xl font-bold text-violet-100">{post.category[0]}</span>
           </div>
 
           <div className="prose prose-gray max-w-none">
@@ -96,7 +96,7 @@ export default function BlogPost() {
           <div className="mt-12 pt-8 border-t border-gray-100">
             <Link
               to="/blog"
-              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
+              className="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to all articles

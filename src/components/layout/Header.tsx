@@ -19,14 +19,14 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center">
+          <Link to="/" className="flex items-center gap-2.5">
+            <div className="w-9 h-9 bg-gradient-to-br from-brand-500 to-brand-700 rounded-lg flex items-center justify-center shadow-sm">
               <Bot className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-gray-900">Bolnee</span>
+            <span className="text-xl font-bold text-gray-900 tracking-tight">Bolnee</span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
@@ -38,9 +38,7 @@ export default function Header() {
                 onMouseLeave={() => setOpenDropdown(null)}
               >
                 {link.children ? (
-                  <button
-                    className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
-                  >
+                  <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-brand-600 rounded-lg hover:bg-brand-50 transition-colors">
                     {link.label}
                     <ChevronDown className="w-4 h-4" />
                   </button>
@@ -49,20 +47,20 @@ export default function Header() {
                     to={link.href}
                     className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                       location.pathname === link.href
-                        ? 'text-blue-600 bg-blue-50'
-                        : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+                        ? 'text-brand-600 bg-brand-50'
+                        : 'text-gray-600 hover:text-brand-600 hover:bg-brand-50'
                     }`}
                   >
                     {link.label}
                   </Link>
                 )}
                 {link.children && openDropdown === link.label && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-lg border border-gray-100 py-2 animate-fadeIn">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-100 py-2 animate-fadeIn">
                     {link.children.map((child) => (
                       <Link
                         key={child.label}
                         to={child.href}
-                        className="block px-4 py-3 hover:bg-blue-50 transition-colors"
+                        className="block px-4 py-2.5 hover:bg-brand-50 transition-colors"
                       >
                         <div className="text-sm font-medium text-gray-900">{child.label}</div>
                         {child.description && (
@@ -81,9 +79,9 @@ export default function Header() {
               <div className="relative">
                 <button
                   onClick={() => setUserMenuOpen(!userMenuOpen)}
-                  className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-50 transition-colors"
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-brand-50 transition-colors"
                 >
-                  <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-medium">
+                  <div className="w-8 h-8 bg-gradient-to-br from-brand-500 to-brand-700 rounded-full flex items-center justify-center text-white text-sm font-medium shadow-sm">
                     {user.name.charAt(0).toUpperCase()}
                   </div>
                   <span className="text-sm font-medium text-gray-700">{user.name}</span>
@@ -96,15 +94,15 @@ export default function Header() {
                       <div className="px-4 py-3 border-b border-gray-100">
                         <p className="text-sm font-medium text-gray-900">{user.name}</p>
                         <p className="text-xs text-gray-500">{user.email}</p>
-                        <span className="inline-block mt-1 px-2 py-0.5 text-xs font-medium text-blue-600 bg-blue-50 rounded-full capitalize">
+                        <span className="inline-block mt-1 px-2 py-0.5 text-xs font-medium text-brand-600 bg-brand-50 rounded-full capitalize">
                           {user.plan}
                         </span>
                       </div>
-                      <button className="flex items-center gap-3 w-full px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 transition-colors">
+                      <button className="flex items-center gap-3 w-full px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-50 transition-colors">
                         <User className="w-4 h-4" />
                         Profile
                       </button>
-                      <button className="flex items-center gap-3 w-full px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 transition-colors">
+                      <button className="flex items-center gap-3 w-full px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-50 transition-colors">
                         <Settings className="w-4 h-4" />
                         Dashboard
                       </button>
@@ -123,12 +121,12 @@ export default function Header() {
               </div>
             ) : (
               <>
-                <Link to="/login" className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors">
+                <Link to="/login" className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors">
                   Sign in
                 </Link>
                 <Link
                   to="/register"
-                  className="px-5 py-2.5 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors shadow-sm"
+                  className="px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-brand-500 to-brand-700 rounded-lg hover:from-brand-600 hover:to-brand-800 transition-all shadow-sm"
                 >
                   Start Free
                 </Link>
@@ -151,7 +149,7 @@ export default function Header() {
                   <>
                     <button
                       onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
-                      className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-blue-50"
+                      className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-brand-50"
                     >
                       {link.label}
                       <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === link.label ? 'rotate-180' : ''}`} />
@@ -162,7 +160,7 @@ export default function Header() {
                           <Link
                             key={child.label}
                             to={child.href}
-                            className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg"
+                            className="block px-3 py-2 text-sm text-gray-600 hover:text-brand-600 hover:bg-brand-50 rounded-lg"
                             onClick={() => setMobileOpen(false)}
                           >
                             {child.label}
@@ -174,7 +172,7 @@ export default function Header() {
                 ) : (
                   <Link
                     to={link.href}
-                    className="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 rounded-lg hover:bg-blue-50"
+                    className="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-brand-600 rounded-lg hover:bg-brand-50"
                     onClick={() => setMobileOpen(false)}
                   >
                     {link.label}
@@ -186,7 +184,7 @@ export default function Header() {
               {user ? (
                 <>
                   <div className="px-3 py-2 flex items-center gap-3">
-                    <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-medium">
+                    <div className="w-8 h-8 bg-gradient-to-br from-brand-500 to-brand-700 rounded-full flex items-center justify-center text-white text-sm font-medium">
                       {user.name.charAt(0).toUpperCase()}
                     </div>
                     <div>
@@ -213,7 +211,7 @@ export default function Header() {
                   </Link>
                   <Link
                     to="/register"
-                    className="block w-full text-center px-4 py-2.5 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700"
+                    className="block w-full text-center px-4 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-brand-500 to-brand-700 rounded-lg hover:from-brand-600 hover:to-brand-800"
                     onClick={() => setMobileOpen(false)}
                   >
                     Start Free

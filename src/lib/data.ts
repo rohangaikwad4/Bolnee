@@ -29,12 +29,37 @@ export const navLinks: NavLink[] = [
   { label: 'Tools', href: '/tools' },
 ]
 
+export const customers = [
+  'GrowthX', 'Scope', 'Valant', 'Savory Institute', 'Sagacity',
+]
+
 export const stats = [
   { value: '80%', label: 'of tickets resolved automatically' },
   { value: '24/7', label: 'permanent availability' },
   { value: '-70%', label: 'response time reduction' },
   { value: '5 min', label: 'to configure your agent' },
 ]
+
+export const beforeAfter = {
+  before: {
+    title: 'Fickle, one-size-fits-all chatbots that do more harm than good',
+    items: [
+      'Generic AI tools don\'t answer based on your training data',
+      'Custom-built bots are finicky and difficult to maintain',
+      'Customer service staff takes 3+ months to train',
+      'Bogged down with support tickets',
+    ],
+  },
+  after: {
+    title: 'An automated resource that super charges your support team',
+    items: [
+      'Provide 24/7/365 quality customer support with instant responses',
+      'Automate answering the vast majority of support tickets',
+      'Make your current support team twice as productive',
+      'Free up time to work on higher-level tasks',
+    ],
+  },
+}
 
 export const features = [
   {
@@ -57,21 +82,54 @@ export const features = [
 export const howItWorks = [
   {
     step: '01',
-    title: 'Give it your knowledge',
-    description: 'Upload your PDFs, Docx files, or simply your website URL. Bolnee learns everything in seconds.',
+    title: 'Sync training data',
+    description: 'Enter your URL for Bolnee to scan, or upload files, or drop in raw text content.',
     features: ['Simple import: drag-and-drop your files', 'Precise settings: define tone, style, and response rules'],
   },
   {
     step: '02',
-    title: 'Integrate it everywhere',
-    description: 'Copy one line of code for your site or connect your favorite channels.',
+    title: 'Install on your site',
+    description: 'Embed a chatbot on as many sites as you want — your marketing site, in-app, help center… wherever.',
     features: ['Universal widget: compatible with all platforms', 'Omnichannel: WhatsApp, Slack, Messenger, API'],
   },
   {
     step: '03',
-    title: 'Watch it work',
-    description: 'The AI responds to your customers. Follow conversations and optimize responses in real time.',
+    title: 'Learn and refine',
+    description: 'Use real chat history to improve your chatbot by providing feedback that allows it to improve with every interaction.',
     features: ['Clear dashboard: volume, resolution rate, user sentiment', 'Continuous improvement: identify new questions'],
+  },
+]
+
+export const featureCards = [
+  {
+    title: 'Personalized Chatbot',
+    description: 'Build a custom chatbot trained on your own content. Train your chatbot with your content and let it echo your brand\'s voice.',
+    icon: 'MessageCircle',
+  },
+  {
+    title: 'Quick Prompts',
+    description: 'Give users a digital icebreaker to kick things off. Include frequently asked questions to get value out of your product.',
+    icon: 'Zap',
+  },
+  {
+    title: 'Email Summaries',
+    description: 'Keep a pulse on chatbot interactions with daily summaries delivered to your inbox. Track performance and gain insights.',
+    icon: 'FileText',
+  },
+  {
+    title: 'Escalate to Human',
+    description: 'Users can seamlessly transition the conversation to a live agent at the push of a button. Hybrid approach for best assistance.',
+    icon: 'MessageSquare',
+  },
+  {
+    title: 'Collect Leads',
+    description: 'Don\'t just answer questions, seize opportunities. Capture interested visitors\' details to build a list of potential leads.',
+    icon: 'Users',
+  },
+  {
+    title: 'Functions',
+    description: 'Turn natural language commands into in-app actions. Your chatbot can listen, understand, and interact with other systems.',
+    icon: 'Bot',
   },
 ]
 
@@ -98,25 +156,35 @@ export const benefits = [
   },
 ]
 
+export const integrations = [
+  'Crisp', 'Intercom', 'Zendesk', 'Slack', 'WhatsApp', 'Messenger',
+]
+
 export const testimonials: Testimonial[] = [
+  {
+    name: 'Brent Burrows II',
+    company: 'CBS Bahamas',
+    role: 'Vice President – Retail & Sales',
+    content: 'We\'ve got the bot dialled in — we\'re using GPT-4, have an avenue for escalations to Zendesk, and so far I have no complaints.',
+  },
   {
     name: 'Alexandre Dubois',
     company: 'TechCorp',
     role: 'CTO',
-    content: 'Integrating Bolnee was incredibly simple. Our customers get instant answers about our products, which has noticeably improved their experience on our site.',
+    content: 'Integrating Bolnee was incredibly simple. Our customers get instant answers about our products, which has noticeably improved their experience.',
   },
   {
     name: 'Sarah Martin',
     company: 'DigitalFlow',
     role: 'Marketing Director',
-    content: 'A powerful tool for qualifying our leads. The chatbot handles basic questions and lets us focus on high-value requests. Implementation was very fast.',
+    content: 'A powerful tool for qualifying our leads. The chatbot handles basic questions and lets us focus on high-value requests.',
   },
-  {
-    name: 'Thomas Bernard',
-    company: 'InnovaPlus',
-    role: 'CEO',
-    content: 'Bolnee has become a full member of our team. It handles frequently asked questions with remarkable efficiency, 24/7. Our users love it!',
-  },
+]
+
+export const securityBadges = [
+  { name: 'SOC 2 Type II', description: 'Examined' },
+  { name: 'GDPR', description: 'Compliant' },
+  { name: 'HIPAA', description: 'Assessed' },
 ]
 
 export const pricingTiers: PriceTier[] = [
@@ -162,7 +230,7 @@ export const faq: FaqItem[] = [
   },
   {
     question: 'Is Bolnee GDPR compliant?',
-    answer: 'Yes, Bolnee is a French solution compliant with GDPR. Data is hosted in Europe, confidentiality is ensured with strict compliance, and no personal data is used to train third-party models.',
+    answer: 'Yes, Bolnee is GDPR compliant. Data is hosted in Europe, confidentiality is ensured with strict compliance, and no personal data is used to train third-party models.',
   },
   {
     question: 'What types of documents can I import into Bolnee?',
@@ -174,7 +242,7 @@ export const faq: FaqItem[] = [
   },
   {
     question: 'Can the chatbot make up false answers?',
-    answer: 'The risk of invention is very low thanks to RAG technology: the Bolnee chatbot relies exclusively on the documents you provide. However, it\'s important to note that with AI, zero error is not achievable. If the information is not found in your knowledge base, the agent honestly indicates this and can offer a connection with a human.',
+    answer: 'The risk of invention is very low thanks to RAG technology: the Bolnee chatbot relies exclusively on the documents you provide. If the information is not found in your knowledge base, the agent honestly indicates this and can offer a connection with a human.',
   },
 ]
 

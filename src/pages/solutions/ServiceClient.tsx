@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Headphones, Ticket, MessageCircle, ArrowUp, ArrowRight, Check, Clock, Users } from 'lucide-react';
+import { Headphones, Ticket, MessageCircle, ArrowUp, ArrowRight, Check } from 'lucide-react';
 
 const features = [
   {
@@ -34,16 +34,16 @@ const stats = [
 export default function ServiceClient() {
   return (
     <>
-      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 text-white py-20 lg:py-28">
+      <section className="relative bg-gradient-to-br from-violet-700 via-brand-600 to-violet-800 text-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">Customer Service Automation</h1>
-            <p className="text-lg lg:text-xl text-blue-100 mb-8">
+            <p className="text-lg lg:text-xl text-violet-100 mb-8">
               Transform your support desk with an AI that never sleeps. Slash response times, reduce ticket volume, and
               keep every customer smiling.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/register" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
+              <Link to="/register" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-brand-700 font-semibold rounded-lg hover:bg-brand-50 transition-colors">
                 Start Free <ArrowRight className="w-4 h-4" />
               </Link>
               <a href="https://cal.eu/anas-rabhi/30min" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
@@ -60,8 +60,8 @@ export default function ServiceClient() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((f, i) => (
               <div key={i} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-5">
-                  <f.icon className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-5">
+                  <f.icon className="w-6 h-6 text-brand-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{f.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{f.desc}</p>
@@ -77,7 +77,7 @@ export default function ServiceClient() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((s, i) => (
               <div key={i} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">{s.value}</div>
+                <div className="text-4xl font-bold text-brand-600 mb-2">{s.value}</div>
                 <div className="text-sm font-medium text-gray-900">{s.label}</div>
                 <div className="text-sm text-gray-500 mt-1">{s.sub}</div>
               </div>
@@ -86,12 +86,12 @@ export default function ServiceClient() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 text-white">
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-violet-700 via-brand-600 to-violet-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">Automate Your Support Today</h2>
-          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">Deploy in minutes and start seeing measurable improvements in your support metrics.</p>
+          <p className="text-lg text-violet-100 mb-8 max-w-2xl mx-auto">Deploy in minutes and start seeing measurable improvements in your support metrics.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/register" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
+            <Link to="/register" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-brand-700 font-semibold rounded-lg hover:bg-brand-50 transition-colors">
               <Check className="w-5 h-5" /> Start Free
             </Link>
             <a href="https://cal.eu/anas-rabhi/30min" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">

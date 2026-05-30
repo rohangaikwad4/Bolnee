@@ -18,13 +18,13 @@ const values = [
 export default function About() {
   return (
     <div>
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 py-24 lg:py-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-violet-700 via-brand-600 to-violet-800 py-24 lg:py-32">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-40" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             About Bolnee
           </h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+          <p className="text-xl text-violet-100 max-w-2xl mx-auto">
             We're on a mission to make AI-powered customer service accessible to every business.
           </p>
         </div>
@@ -54,20 +54,20 @@ export default function About() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-1">80%</div>
+              <div className="bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl p-8 text-center">
+                <div className="text-4xl font-bold text-brand-600 mb-1">80%</div>
                 <div className="text-sm text-gray-600">Tickets resolved automatically</div>
               </div>
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-1">24/7</div>
+              <div className="bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl p-8 text-center">
+                <div className="text-4xl font-bold text-brand-600 mb-1">24/7</div>
                 <div className="text-sm text-gray-600">Permanent availability</div>
               </div>
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-1">500+</div>
+              <div className="bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl p-8 text-center">
+                <div className="text-4xl font-bold text-brand-600 mb-1">500+</div>
                 <div className="text-sm text-gray-600">Businesses served</div>
               </div>
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-1">10 min</div>
+              <div className="bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl p-8 text-center">
+                <div className="text-4xl font-bold text-brand-600 mb-1">10 min</div>
                 <div className="text-sm text-gray-600">Setup time</div>
               </div>
             </div>
@@ -79,8 +79,8 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="bg-white rounded-2xl p-8 border border-gray-100">
-              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5">
-                <Target className="w-7 h-7 text-blue-600" />
+              <div className="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center mb-5">
+                <Target className="w-7 h-7 text-brand-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Our Mission</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -90,8 +90,8 @@ export default function About() {
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 border border-gray-100">
-              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5">
-                <Eye className="w-7 h-7 text-blue-600" />
+              <div className="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center mb-5">
+                <Eye className="w-7 h-7 text-brand-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Our Vision</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -115,8 +115,8 @@ export default function About() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member) => (
               <div key={member.name} className="text-center group">
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:from-blue-600 group-hover:to-indigo-700 transition-colors">
-                  <span className="text-2xl font-bold text-blue-600 group-hover:text-white transition-colors">{member.initials}</span>
+                <div className="w-24 h-24 bg-gradient-to-br from-brand-100 to-brand-200 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:from-brand-600 group-hover:to-brand-800 transition-colors">
+                  <span className="text-2xl font-bold text-brand-600 group-hover:text-white transition-colors">{member.initials}</span>
                 </div>
                 <h3 className="text-base font-semibold text-gray-900">{member.name}</h3>
                 <p className="text-sm text-gray-500">{member.role}</p>
@@ -137,8 +137,8 @@ export default function About() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value) => (
               <div key={value.title} className="text-center">
-                <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-7 h-7 text-blue-600" />
+                <div className="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <value.icon className="w-7 h-7 text-brand-600" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{value.title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{value.description}</p>
@@ -148,17 +148,17 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800">
+      <section className="py-20 bg-gradient-to-br from-violet-700 via-brand-600 to-violet-800">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Customer Service?
           </h2>
-          <p className="text-lg text-blue-100 mb-8">
+          <p className="text-lg text-violet-100 mb-8">
             Join hundreds of businesses already using Bolnee. Start free, no credit card required.
           </p>
           <Link
             to="/register"
-            className="inline-flex items-center gap-2 bg-white text-blue-700 px-8 py-3.5 rounded-xl font-semibold hover:bg-blue-50 transition-colors shadow-lg"
+            className="inline-flex items-center gap-2 bg-white text-brand-700 px-8 py-3.5 rounded-xl font-semibold hover:bg-brand-50 transition-colors shadow-lg"
           >
             Get Started Free
           </Link>

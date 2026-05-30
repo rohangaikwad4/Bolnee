@@ -5,13 +5,13 @@ import { pricingTiers } from '../lib/data'
 export default function Pricing() {
   return (
     <div>
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 py-24 lg:py-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-violet-700 via-brand-600 to-violet-800 py-24 lg:py-32">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-40" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Choose the Plan That Fits Your Growth
           </h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+          <p className="text-xl text-violet-100 max-w-2xl mx-auto">
             Start for free, scale as you grow. No hidden fees, no surprises.
           </p>
         </div>
@@ -25,12 +25,12 @@ export default function Pricing() {
                 key={tier.name}
                 className={`relative bg-white rounded-2xl shadow-sm border-2 p-8 flex flex-col transition-all duration-300 hover:shadow-lg ${
                   tier.popular
-                    ? 'border-blue-600 ring-2 ring-blue-600/20 scale-105 lg:scale-110'
-                    : 'border-gray-100 hover:border-blue-200'
+                    ? 'border-brand-600 ring-2 ring-brand-600/20 scale-105 lg:scale-110'
+                    : 'border-gray-100 hover:border-brand-200'
                 }`}
               >
                 {tier.popular && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-semibold px-4 py-1 rounded-full">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-600 text-white text-xs font-semibold px-4 py-1 rounded-full">
                     Most Popular
                   </span>
                 )}
@@ -45,7 +45,7 @@ export default function Pricing() {
                 <ul className="space-y-3 mb-8 flex-1">
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3 text-sm text-gray-600">
-                      <Check className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
+                      <Check className="w-4 h-4 text-brand-600 mt-0.5 shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -54,7 +54,7 @@ export default function Pricing() {
                   to={tier.name === 'Enterprise' ? '/contact' : '/register'}
                   className={`block text-center py-3 px-6 rounded-xl font-medium transition-colors ${
                     tier.popular
-                      ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-sm'
+                      ? 'bg-brand-600 text-white hover:bg-brand-700 shadow-sm'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
