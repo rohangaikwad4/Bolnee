@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Menu, X, ChevronDown, Bot, LogOut, User, Settings } from 'lucide-react'
 import { navLinks } from '../../lib/data'
@@ -8,9 +8,19 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const [userMenuOpen, setUserMenuOpen] = useState(false)
+  const dropdownTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
   const location = useLocation()
   const navigate = useNavigate()
   const { user, logout } = useAuth()
+
+  function openDropdownMenu(label: string) {
+    if (dropdownTimer.current) clearTimeout(dropdownTimer.current)
+    setOpenDropdown(label)
+  }
+
+  function closeDropdownMenu() {
+    dropdownTimer.current = setTimeout(() => setOpenDropdown(null), 200)
+  }
 
   function handleLogout() {
     logout()
@@ -34,11 +44,14 @@ export default function Header() {
               <div
                 key={link.label}
                 className="relative"
-                onMouseEnter={() => link.children && setOpenDropdown(link.label)}
-                onMouseLeave={() => setOpenDropdown(null)}
+                onMouseEnter={() => link.children && openDropdownMenu(link.label)}
+                onMouseLeave={closeDropdownMenu}
               >
                 {link.children ? (
-                  <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-brand-600 rounded-lg hover:bg-brand-50 transition-colors">
+                  <button
+                    onMouseEnter={() => openDropdownMenu(link.label)}
+                    className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-brand-600 rounded-lg hover:bg-brand-50 transition-colors"
+                  >
                     {link.label}
                     <ChevronDown className="w-4 h-4" />
                   </button>
@@ -55,7 +68,11 @@ export default function Header() {
                   </Link>
                 )}
                 {link.children && openDropdown === link.label && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-100 py-2 animate-fadeIn">
+                  <div
+                    onMouseEnter={() => openDropdownMenu(link.label)}
+                    onMouseLeave={closeDropdownMenu}
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-100 py-2 animate-fadeIn"
+                  >
                     {link.children.map((child) => (
                       <Link
                         key={child.label}
