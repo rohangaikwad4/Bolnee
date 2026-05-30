@@ -27,6 +27,7 @@ export const navLinks: NavLink[] = [
   { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blog' },
   { label: 'Tools', href: '/tools' },
+  { label: 'Customer Portal', href: '/customer' },
 ]
 
 export const customers = [

@@ -19,6 +19,7 @@ import About from './pages/About'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import LegalPage from './pages/LegalPage'
+import CustomerPortal from './pages/CustomerPortal'
 import './app.css'
 
 export default function App() {
@@ -45,6 +46,7 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/legal" element={<LegalPage />} />
+          <Route path="/customer" element={<CustomerPortal />} />
         </Route>
       </Routes>
     </BrowserRouter>
